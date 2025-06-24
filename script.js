@@ -41,31 +41,31 @@ function playGame(userWeapon) {
 
     if (userWeapon === 'rock') {
         if (computerWeapon === 'paper') {
-            roundDescription.textContent = `You lose ${userWeapon}   ${computerWeapon}`;
+            roundDescription.textContent = `You lose ${userWeapon} vs ${computerWeapon}`;
             score.loses += 1;
         }
         else if (computerWeapon === 'scissors') {
-            roundDescription.textContent = `You win! ${userWeapon}   ${computerWeapon}`;
+            roundDescription.textContent = `You win! ${userWeapon} vs ${computerWeapon}`;
             score.wins += 1;
         }
     }
     if (userWeapon === 'paper') {
         if (computerWeapon === 'scissors') {
-            roundDescription.textContent = `You lose ${userWeapon}   ${computerWeapon}`;
+            roundDescription.textContent = `You lose ${userWeapon} vs ${computerWeapon}`;
             score.loses += 1;
         }
         else if (computerWeapon === 'rock') {
-            roundDescription.textContent = `You win! ${userWeapon}   ${computerWeapon}`;
+            roundDescription.textContent = `You win! ${userWeapon} vs ${computerWeapon}`;
             score.wins += 1;
         }
     }
     if (userWeapon === 'scissors') {
         if (computerWeapon === 'rock') {
-            roundDescription.textContent = `You lose ${userWeapon}   ${computerWeapon}`;
+            roundDescription.textContent = `You lose ${userWeapon} vs ${computerWeapon}`;
             score.loses += 1;
         }
         else if (computerWeapon === 'paper') {
-            roundDescription.textContent = `You win! ${userWeapon}   ${computerWeapon}`;
+            roundDescription.textContent = `You win! ${userWeapon} vs ${computerWeapon}`;
             score.wins += 1;
         }
     }
