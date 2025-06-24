@@ -1,0 +1,29 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+.wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper h1 {
+    margin: 0.5rem;
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    gap: 20px;
+}
+
+.button-section button {
+    font-size: 0.9rem;
+}
