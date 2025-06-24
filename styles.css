@@ -1,7 +1,9 @@
 body {
+    color: bisque;
     margin: 0px;
     padding: 0px;
     display: flex;
+    background-image: url('images/5630939.jpg');
 }
 
 .wrapper {
@@ -13,7 +15,7 @@ body {
 }
 
 .wrapper h1 {
-    margin: 0.5rem;
+    margin: 2.5rem 0rem 1.5rem 0rem;
 }
 
 .button-section {
@@ -25,7 +27,10 @@ body {
 }
 
 .button-section button {
-    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 #round-description {
