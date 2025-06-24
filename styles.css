@@ -27,3 +27,12 @@ body {
 .button-section button {
     font-size: 0.9rem;
 }
+
+#round-description {
+    visibility: hidden;
+
+}
+
+#score-text {
+    visibility: hidden;
+}
