@@ -3,6 +3,7 @@ let paperBtn = document.getElementById('paper-btn');
 let scissorsBtn = document.getElementById('scissors-btn');
 let scoreText = document.getElementById('score-text');
 let roundDescription = document.getElementById('round-description');
+roundDescription.style.whiteSpace = "pre-line";
 let allGames = document.getElementById('games-counter');
 let userWeapon = '';
 let computerWeapon = '';
@@ -23,8 +24,6 @@ let colors = {
     0: 'red',
     1: 'green',
     2: 'blue',
-    3: 'brown',
-    4: 'purple',
 }
 
 function getRandomInt(max) {
@@ -35,43 +34,61 @@ function playGame(userWeapon) {
     let bigerRandomInteger = getRandomInt(5);
     computerWeapon = weapons[randomInteger];
     if (userWeapon === computerWeapon) {
-        roundDescription.textContent = `It's a Tie ${userWeapon} vs ${computerWeapon}`;
+        roundDescription.textContent = `   It's a Tie
+        ${userWeapon} vs ${computerWeapon}`;
         score.draws += 1;
+        scoreText.style.color = `${colors[2]}`;
+
     }
 
     if (userWeapon === 'rock') {
         if (computerWeapon === 'paper') {
-            roundDescription.textContent = `You lose ${userWeapon} vs ${computerWeapon}`;
+            roundDescription.textContent = `You lose
+            ${userWeapon} vs ${computerWeapon}`;
+            scoreText.style.color = `${colors[0]}`;
             score.loses += 1;
         }
         else if (computerWeapon === 'scissors') {
-            roundDescription.textContent = `You win! ${userWeapon} vs ${computerWeapon}`;
+            roundDescription.textContent = `You win!
+            ${userWeapon} vs ${computerWeapon}`;
             score.wins += 1;
+            scoreText.style.color = `${colors[1]}`;
         }
     }
     if (userWeapon === 'paper') {
         if (computerWeapon === 'scissors') {
-            roundDescription.textContent = `You lose ${userWeapon} vs ${computerWeapon}`;
+            roundDescription.textContent = `You lose
+            ${userWeapon} vs ${computerWeapon}`;
             score.loses += 1;
+            scoreText.style.color = `${colors[0]}`;
+
         }
         else if (computerWeapon === 'rock') {
-            roundDescription.textContent = `You win! ${userWeapon} vs ${computerWeapon}`;
+            roundDescription.textContent = `You win!
+            ${userWeapon} vs ${computerWeapon}`;
             score.wins += 1;
+            scoreText.style.color = `${colors[1]}`;
+
         }
     }
     if (userWeapon === 'scissors') {
         if (computerWeapon === 'rock') {
-            roundDescription.textContent = `You lose ${userWeapon} vs ${computerWeapon}`;
+            roundDescription.textContent = `You lose
+            ${userWeapon} vs ${computerWeapon}`;
             score.loses += 1;
+            scoreText.style.color = `${colors[0]}`;
+
         }
         else if (computerWeapon === 'paper') {
-            roundDescription.textContent = `You win! ${userWeapon} vs ${computerWeapon}`;
+            roundDescription.textContent = `You win!
+            ${userWeapon} vs ${computerWeapon}`;
             score.wins += 1;
+            scoreText.style.color = `${colors[1]}`;
+
         }
     }
     totalGamePlayed += 1;
     scoreText.textContent = `Score: wins: ${score.wins}  draws: ${score.draws}   loses: ${score.loses}`;
-    scoreText.style.color = `${colors[bigerRandomInteger]}`;
     allGames.textContent = `Total games played: ${totalGamePlayed}`;
     scoreText.style.visibility = 'visible';
     roundDescription.style.visibility = 'visible';

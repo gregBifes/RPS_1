@@ -34,8 +34,10 @@ body {
 }
 
 #round-description {
-    visibility: hidden;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
 }
 
 #score-text {
